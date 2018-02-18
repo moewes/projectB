@@ -1,10 +1,9 @@
-package de.mach.poc.erpmock;
+package net.moewes.projectB.poc.erpmock;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/login")
@@ -24,6 +23,8 @@ public class LoginServlet extends HttpServlet {
         PrintWriter w = res.getWriter();
 
         w.append("Hallo");
+
+        w.close();
     }
 
     public String getServletInfo() {

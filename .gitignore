@@ -1,0 +1,8 @@
+
+.idea/
+.idea/libraries/*.xml
+*.iml
+*/*.iml
+*/.idea/
+*/target/
+.idea/libraries/
