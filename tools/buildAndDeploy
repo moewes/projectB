@@ -1,0 +1,6 @@
+cd ../pocerp
+
+mvn package
+
+echo "Deploy"
+cp ./target/*.war ~/docker/wildfly-10.1.0.Final/standalone/deployments
