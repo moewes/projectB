@@ -1,4 +1,4 @@
-package net.moewes.projectB.poc.erpmock;
+package net.moewes.projectB.erpmock.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,18 +14,15 @@ public class WorkServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       // super.doGet(req, resp);
 
         Logger log = Logger.getLogger("Work Servlet"); // TODO: Inject zentralen Logger
 
         log.info("werde aufgerufen");
 
-        System.out.println("Out: Work werde aufgerufen!");
+        PrintWriter w = resp.getWriter();
 
-       PrintWriter w = resp.getWriter() ;
+        w.append("Hier ist das WorkServlet");
 
-       w.append("Hier ist das WorkServlet");
-
-       w.close();
+        w.close();
     }
 }

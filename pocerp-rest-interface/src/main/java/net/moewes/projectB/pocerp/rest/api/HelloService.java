@@ -1,5 +1,4 @@
-package net.moewes.projectB.poc.erpmock.jaxrs;
-
+package net.moewes.projectB.pocerp.rest.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -8,16 +7,11 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/hello")
-public class HelloService {
+public interface HelloService {
 
     @Path("message")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getHelloMessage() {
-
-        return Response.ok("Hallo Test").build();
-
-    }
-
+    Response getHelloMessage();
 
 }

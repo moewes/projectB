@@ -1,4 +1,4 @@
-package net.moewes.projectB.poc.erpmock;
+package net.moewes.projectB.erpmock.keycloak;
 
 import org.keycloak.adapters.KeycloakConfigResolver;
 import org.keycloak.adapters.KeycloakDeployment;

@@ -1,4 +1,4 @@
-package net.moewes.projectB.poc.erpmock.jaxrs;
+package net.moewes.projectB.erpmock.jaxrs;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

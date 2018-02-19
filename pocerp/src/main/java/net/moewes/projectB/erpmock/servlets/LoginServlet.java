@@ -1,4 +1,4 @@
-package net.moewes.projectB.poc.erpmock;
+package net.moewes.projectB.erpmock.servlets;
 
 import org.keycloak.AuthorizationContext;
 import org.keycloak.KeycloakSecurityContext;

@@ -1,7 +1,14 @@
+# rest-interface
+cd ../pocerp-rest-interface
+
+mvn clean
+mvn install
+
+# pocerp
 cd ../pocerp
 
 mvn clean
 mvn package
 
-echo "Deploy"
+echo "Deploy POCERP"
 cp ./target/*.war ~/docker/wildfly-10.1.0.Final/standalone/deployments
