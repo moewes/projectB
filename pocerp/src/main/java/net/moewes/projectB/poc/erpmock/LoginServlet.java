@@ -1,5 +1,9 @@
 package net.moewes.projectB.poc.erpmock;
 
+import org.keycloak.AuthorizationContext;
+import org.keycloak.KeycloakSecurityContext;
+import org.keycloak.representations.IDToken;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +27,15 @@ public class LoginServlet extends HttpServlet {
         PrintWriter w = res.getWriter();
 
         w.append("Hallo");
+
+        KeycloakSecurityContext context = (KeycloakSecurityContext) req.getAttribute(KeycloakSecurityContext.class.getName());
+
+        IDToken id = context.getIdToken();
+
+        w.append("<br/>Name: " + id.getPreferredUsername());
+
+        AuthorizationContext ac = context.getAuthorizationContext();
+
 
         w.close();
     }
