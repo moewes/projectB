@@ -7,8 +7,20 @@ mvn install
 # pocerp
 cd ../pocerp
 
+echo "Build POC ERP"
+
 mvn clean
 mvn package
 
 echo "Deploy POCERP"
+cp ./target/*.war ~/docker/wildfly-10.1.0.Final/standalone/deployments
+
+# pocportal
+echo "Build POC Portal"
+
+cd ../pocportal
+
+mvn clean
+mvn package
+
 cp ./target/*.war ~/docker/wildfly-10.1.0.Final/standalone/deployments

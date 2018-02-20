@@ -6,7 +6,7 @@
 
     <context-param>
         <param-name>keycloak.config.resolver</param-name>
-        <param-value>net.moewes.projectB.erpmock.keycloak.MyKeycloakConfigResolver</param-value>
+        <param-value>net.moewes.projectB.pocportal.keycloak.MyKeycloakConfigResolver</param-value>
     </context-param>
 
     <filter>
@@ -14,13 +14,12 @@
         <filter-class>org.keycloak.adapters.servlet.KeycloakOIDCFilter</filter-class>
         <init-param>
             <param-name>keycloak.config.resolver</param-name>
-            <param-value>net.moewes.projectB.erpmock.keycloak.MyKeycloakConfigResolver</param-value>
+            <param-value>net.moewes.projectB.pocportal.keycloak.MyKeycloakConfigResolver</param-value>
         </init-param>
     </filter>
     <filter-mapping>
         <filter-name>Keycloak Filter</filter-name>
-        <url-pattern>/rest/*</url-pattern>
-        <url-pattern>/login</url-pattern>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
 
 </web-app>
