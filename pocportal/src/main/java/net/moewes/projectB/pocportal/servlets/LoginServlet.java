@@ -34,8 +34,6 @@ public class LoginServlet extends HttpServlet {
 
             AuthorizationContext ac = context.getAuthorizationContext();
 
-            //log(context.getToken());
-            log(context.getTokenString());
             // Aufruf eines Webservices
             Client client = ClientBuilder.newClient();
 
